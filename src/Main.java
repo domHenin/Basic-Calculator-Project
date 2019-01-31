@@ -57,15 +57,23 @@ public class Main {
 
         solvedAns.welcomeUser();
         solvedAns.getIntput();
-
         solvedAns.getChoice();
 
         switch (solvedAns.usrChoice) {
             case 1:
-                System.out.println("Inside case One for Test.");
+                System.out.println("Answer: " +solvedAns.addNumber());
                 break;
+            case 2:
+                System.out.println("Answer: " +solvedAns.subNumber());
+                break;
+            case 3:
+                System.out.println("Answer: " +solvedAns.multNumber());
+                break;
+            case 4:
+                System.out.println("Answer: " +solvedAns.divNumber());
 
                 default:
+                    System.out.println("Ok? Good Bye.");
                     break;
         }
 
