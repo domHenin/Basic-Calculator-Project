@@ -1,65 +1,85 @@
 import java.util.*;
 
-public class Main {
-    static Scanner input = new Scanner(System.in);
-    static double numOne, numTwo;
-    static double finAnwer = 0;
-    static int userChoice;
+class SolveForAnswer {
+    Scanner input = new Scanner(System.in);
+    double firInp;
+    double secInp;
+    double numAns;
+    int usrChoice;
+//    double firInput;
+//    double secInput;
 
-    public static void main(String[] args) {
+
+    double addNumber(){
+        double numAns = firInp + secInp;
+        return numAns;
+    }
+
+    double subNumber() {
+        double numAns = firInp - secInp;
+        return numAns;
+    }
+
+    double multNumber() {
+        double numAns = firInp * secInp;
+        return numAns;
+    }
+
+    double divNumber() {
+        double numAns = firInp / secInp;
+        return numAns;
+    }
+
+    void welcomeUser() {
         System.out.println("Welcome to Basic Calculator!");
+    }
 
-        System.out.println("Enter First Number: ");
-        numOne = input.nextDouble();
+    void getIntput() {
+        System.out.println("Enter first number: ");
+        firInp = input.nextDouble();
 
-        System.out.println("Enter Second Number: ");
-        numTwo = input.nextDouble();
+        System.out.println("Enter seconds number: ");
+        secInp = input.nextDouble();
+    }
 
+    void getChoice() {
         System.out.println("Enter the Method to Calculate: ");
         System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Divide");
-        userChoice = input.nextInt();
 
-        switch (userChoice) {
+        usrChoice= input.nextInt();
+    }
+
+
+}
+public class Main {
+    public static void main(String[] args) {
+        SolveForAnswer solvedAns = new SolveForAnswer();
+
+        solvedAns.welcomeUser();
+        solvedAns.getIntput();
+
+        solvedAns.getChoice();
+
+        switch (solvedAns.usrChoice) {
             case 1:
-                additionMethod();
+                System.out.println("Inside case One for Test.");
                 break;
-            case 2:
-                subtractionMethod();
-                break;
-            case 3:
-                multiplicationMethod();
-                break;
-            case 4:
-                divideMethod();
-                break;
-            default:
-               System.out.println("Okay? GoodBye!");
-               break;
+
+                default:
+                    break;
         }
-    }
 
-    public static void additionMethod() {
-        finAnwer = numOne + numTwo;
-        System.out.println("Answer: " +finAnwer);
-        System.out.println("GoodBye.");
-    }
+//        System.out.println("Answer: " + solvedAns.subNumber());
 
-    public static void subtractionMethod() {
-        finAnwer = numOne - numTwo;
-        System.out.println("Answer: " +finAnwer);
-        System.out.println("GoodBye.");
-    }
+//        solvedAns.addNumber();
+//        System.out.println("Welcome to Basic Calculator!");
 
-    public static void multiplicationMethod() {
-        finAnwer = numOne * numTwo;
-        System.out.println("Answer: " +finAnwer);
-        System.out.println("GoodBye.");
-    }
+//        System.out.println("Enter First Number: ");
+//        System.out.println("Enter Second Number: ");
 
-    public static void divideMethod() {
-        finAnwer = numOne / numTwo;
-        System.out.println("Answer: " +finAnwer);
-        System.out.println("GoodBye.");
+
+//        System.out.println("Enter the Method to Calculate: ");
+//        System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Divide");
     }
 }
 
@@ -69,3 +89,16 @@ public class Main {
 //subtractionMethod()
 //multiplicationMethod()
 //divideMethod()
+
+//DIRECTORY:
+//firInp --> 'first input'
+//secInp --> 'second input'
+//addAns --> 'add answer'
+//numAns --> 'number answer'
+//solvedAns --> 'solved answer'
+//firInput --> 'first input'
+//secInput --> 'second input'
+//usrChoice --> 'user choice'
+
+
+
